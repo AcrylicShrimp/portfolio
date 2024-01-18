@@ -27,6 +27,9 @@ const config = {
       '@lib': './src/lib',
       '@styles': './src/styles',
     },
+    paths: {
+      base: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+    },
   },
 };
 
