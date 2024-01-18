@@ -1,5 +1,6 @@
 import type { UrlInfo } from '@lib/UrlInfo';
-import { ProjectType, type ProjectInfo } from '@lib/ProjectInfo';
+import type { ProjectInfo } from '@lib/ProjectInfo';
+import { r3d } from './projects';
 
 export const urls: UrlInfo[] = [
   {
@@ -11,37 +12,4 @@ export const urls: UrlInfo[] = [
     url: 'https://blog.ashrimp.dev',
   },
 ];
-export const projects: ProjectInfo[] = [
-  {
-    id: 'r3d',
-    type: ProjectType.Personal,
-    name: 'r3d',
-    beginAt: '2023-06',
-    description: 'webgpu를 활용한 3D 게임엔진 프로젝트입니다.',
-    tag: 'graphics',
-  },
-  {
-    id: 'r3d',
-    type: ProjectType.Career,
-    name: 'r3d',
-    beginAt: '2023-06',
-    description: 'webgpu를 활용한 3D 게임엔진 프로젝트입니다.',
-    tag: 'graphics',
-  },
-  {
-    id: 'r3d',
-    type: ProjectType.Personal,
-    name: 'r3d',
-    beginAt: '2023-06',
-    description: 'webgpu를 활용한 3D 게임엔진 프로젝트입니다.',
-    tag: 'graphics',
-  },
-  {
-    id: 'r3d',
-    type: ProjectType.Career,
-    name: 'r3d',
-    beginAt: '2023-06',
-    description: 'webgpu를 활용한 3D 게임엔진 프로젝트입니다.',
-    tag: 'graphics',
-  },
-];
+export const projects: ProjectInfo[] = [r3d, r3d, r3d, r3d];
