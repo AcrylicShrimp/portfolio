@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import type { UrlInfo } from '@lib/UrlInfo';
   import PersonalInfoRow from './PersonalInfoRow.svelte';
 
@@ -9,16 +10,16 @@
   export let extraClass: string = '';
 </script>
 
-<div class={`flex flex-col items-start justify-start ${extraClass}`}>
+<div class="flex flex-col items-start justify-start {extraClass}">
   <PersonalInfoRow label="이름">
     <span class="text-base md:text-lg">{name} ({nickname})</span>
   </PersonalInfoRow>
   <PersonalInfoRow label="이메일">
-    <a href={`mailto:${email}`} class="text-base md:text-lg">{email}</a>
+    <a href="mailto:{email}" class="text-base md:text-lg">{email}</a>
   </PersonalInfoRow>
   {#each urls as { name, url }}
     <PersonalInfoRow label={name}>
-      <a href={url} target="_blank" class="text-base md:text-lg">{url}</a>
+      <a href="{base}/{url}" target="_blank" class="text-base md:text-lg">{url}</a>
     </PersonalInfoRow>
   {/each}
 </div>

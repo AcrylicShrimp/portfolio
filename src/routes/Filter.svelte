@@ -19,7 +19,7 @@
   });
 </script>
 
-<div class={`flex flex-row flex-wrap items-center justify-center ${extraClass}`}>
+<div class="flex flex-row flex-wrap items-center justify-center {extraClass}">
   <FilterTabButton active={tab === 'all'} on:click={() => onClickTab('all')}>ALL</FilterTabButton>
   <FilterTabButton active={tab === 'frontend'} on:click={() => onClickTab('frontend')}
     >FRONTEND</FilterTabButton

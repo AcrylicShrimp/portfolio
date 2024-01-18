@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { ProjectType, type ProjectInfo } from '@lib/ProjectInfo';
   import dayjs from 'dayjs';
 
@@ -25,7 +26,7 @@
   $: projectType = formatProjectType(info.type);
 </script>
 
-<article class={`flex flex-col items-stretch justify-start px-4 py-2 ${bgColor} ${extraClass}`}>
+<article class="flex flex-col items-stretch justify-start px-4 py-2 {bgColor} {extraClass}">
   <div class="flex flex-row items-start justify-stretch">
     <p class="flex-none inline text-sm">
       {beginAt} ~ {endAt}
@@ -33,6 +34,8 @@
     <span class="flex-1" />
     <p class="flex-none inline text-sm">{projectType}</p>
   </div>
-  <h1 class="mt-4"><a href={`/projects/${info.id}`} class="font-bold text-2xl">{info.name}</a></h1>
+  <h1 class="mt-4">
+    <a href="{base}/projects/{info.id}" class="font-bold text-2xl">{info.name}</a>
+  </h1>
   <p class="mt-2 pl-2">{info.description}</p>
 </article>
