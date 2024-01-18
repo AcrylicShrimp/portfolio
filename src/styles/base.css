@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+*::before,
+*::after {
+  @apply border-base-border-color text-base text-inherit;
+}
+
+*:disabled,
+*:disabled::before,
+*:disabled::after {
+  @apply text-base-disabled-text-color;
+}
+
+html {
+  @apply bg-base-bg-color text-base-text-color;
+}
+
+a {
+  @apply underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-base-heading-color;
+}
+
+hr {
+  @apply border-base-separator-color;
+}

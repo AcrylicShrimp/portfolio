@@ -17,6 +17,7 @@
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
 		"autoprefixer": "^10.4.16",
+		"dayjs": "^1.11.10",
 		"postcss": "^8.4.33",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
