@@ -27,13 +27,15 @@ jobs:
 
     - run: npm run build
 
-    - run: tar -czvf github-pages.tar.gz -C build .
+    - run: mkdir -p __site
+
+    - run: tar -czvf __site/github-pages.tar.gz -C build .
 
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
         name: github-pages
-        path: github-pages.tar.gz
+        path: __site
 
   deploy:
     needs: build
